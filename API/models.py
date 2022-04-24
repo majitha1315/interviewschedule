@@ -1,22 +1,19 @@
 from django.db import models
 
 
-from API.managers import UserManager
+
 
 # Create your models here.
 class User(models.Model):
 
     username = models.CharField(max_length=255, unique=True)
     email = models.EmailField(max_length=255)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
     is_candidate = models.BooleanField(default=False)
     is_interviewer = models.BooleanField(default=False)
 
     USERNAME_FIELD = "username"
 
-    objects = UserManager()
-
+    
 
 class InterviewSlot(models.Model):
 
