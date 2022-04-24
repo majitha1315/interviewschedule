@@ -35,10 +35,7 @@ class InterviewSlotSerializer(serializers.ModelSerializer):
         model = InterviewSlot
         fields = ('id', 'date', 'slot')
 
-    class Meta:
-        model = InterviewSlot
-        fields = ('id', 'date', 'slot')
-
+   
     def create(self, validated_data):
 
 
